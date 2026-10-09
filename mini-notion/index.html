@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini-notion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <header class="sidebar-header">
+                <h1 class="logo">mini-notion</h1>
+                <button class="btn-new-page" id="btnNewPage" aria-label="Nova página">+ Nova página</button>
+            </header>
+            <div class="search-container">
+                <input type="text" class="search-input" id="searchInput" placeholder="Buscar páginas..." aria-label="Buscar páginas">
+            </div>
+            <nav class="pages-list" id="pagesList" role="navigation" aria-label="Lista de páginas"></nav>
+        </aside>
+
+        <!-- Main Editor -->
+        <main class="editor" id="editor">
+            <div class="editor-placeholder" id="editorPlaceholder">
+                <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                </svg>
+                <p>Selecione uma página ou crie uma nova para começar</p>
+            </div>
+            <article class="page-editor" id="pageEditor" hidden>
+                <header class="page-header">
+                    <h1 class="page-title" id="pageTitle" contenteditable="true" placeholder="Sem título" aria-label="Título da página"></h1>
+                </header>
+                <div class="page-content" id="pageContent" role="textbox" aria-label="Conteúdo da página"></div>
+            </article>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
